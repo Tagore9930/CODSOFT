@@ -1,0 +1,11 @@
+::ng-deep .mat-mdc-snack-bar-container .mdc-snackbar__surface:has(.success) {
+  background-color: #23c552 !important;
+}
+
+::ng-deep .mat-mdc-snack-bar-container .mdc-snackbar__surface:has(.error) {
+  background-color: #f84f31 !important;
+}
+
+::ng-deep .mat-mdc-snack-bar-container .mdc-snackbar__surface:has(.warning) {
+  background-color: #ffbf00 !important;
+}

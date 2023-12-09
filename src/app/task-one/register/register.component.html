@@ -1,0 +1,78 @@
+<div class="login">
+  <div class="main container-md rounded-5 p-0">
+    <div class="row box">
+      <div class="col-sm-7 p-5 welcome-card d-flex justify-content-center align-items-center">
+        <img src="/assets/Task-One/wecome-img.jpg" class="wecome-img w-100">
+      </div>
+      <div class="col-sm-5 p-0 welcome-card">
+        <div class="card rounded-5 pt-5 px-3 h-100 border-0">
+          <h2 class="mx-3">Sign Up</h2>
+          <small class="mx-3">Please Registration with email and sign up to continue.</small>
+          <div class="row py-2">
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+              <div class="col-12">
+                <mat-form-field class="w-100 py-1" appearance="outline">
+                  <mat-label>Enter Email ID</mat-label>
+                  <mat-icon matPrefix class="my-icon">mail_outline</mat-icon>
+                  <input class="pt-2" matInput [formControl]="registerForm.controls['Email']">
+                  <mat-error *ngIf="registerForm?.controls['Email']?.errors?.required">Please Enter Email Id</mat-error>
+                  <mat-error *ngIf="registerForm?.controls['Email']?.errors?.email">Please Enter Valid Email Id
+                </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-12">
+                <mat-form-field class="w-100 py-1" appearance="outline">
+                  <mat-label>Enter password</mat-label>
+                  <mat-icon matPrefix class="my-icon">lock_open</mat-icon>
+                  <input class="pt-2" matInput [type]="hide ? 'password' : 'text'" [formControl]="registerForm?.controls['Password']" >
+                  <button type="button" mat-icon-button matSuffix (click)="hide = !hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                  <mat-error *ngIf="registerForm?.controls['Password']?.errors?.required" >Please Enter Password</mat-error>
+                  <mat-error *ngIf="registerForm?.controls['Password']?.hasError('minlength')" >Please Enter Valid Password</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-12">
+                <div class="checkbox-containetr d-flex align-items-center">
+                  <input type="checkbox" class="mx-1" id="checkbox">
+                  <label for="checkbox" ></label>
+                  <label for="checkbox" class="link-h">I agree with privacy policy</label>
+
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary w-100 fw-bold" >Sign Up</button>
+                <p class="py-2">
+                  <span>You already have an account?</span>
+                  <a routerLink="/task-1/login" class="link-h mx-1 text-decoration-none">Login</a>
+                </p>
+              </div>
+
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+
+  <div class="col-12">
+    <form [formGroup]="loginForm" (ngSubmit)="tagSubmit()">
+      <mat-label>Enter Email ID</mat-label>
+      <input type="text" [formControl]="loginForm.controls['Email']" matInput>
+      <button type="submit">sumbit</button>
+    </form>
+  </div>
+</div> -->
+
+
