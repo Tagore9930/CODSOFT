@@ -1,0 +1,49 @@
+.temp-mail {
+  background: #fff;
+  height: auto;
+}
+
+.section-one {
+  height: 450px;
+  background-image: url("/assets/Task-Two/bg-img.jpg");
+}
+
+.box {
+  width: 575px;
+  height: 300px;
+}
+
+.start-btn {
+  background-color: #E65100;
+}
+
+footer {
+  background-color: #696868;
+}
+
+.link-h:hover {
+  text-decoration: .5px underline !important;
+  cursor: pointer;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-success {
+  color: #25d366 !important;
+}
+
+@media screen and (max-width: 575px) {
+  .box {
+    width: 100%;
+  }
+
+  .information {
+    display: block !important;
+
+    .social-media {
+      float: right !important;
+    }
+  }
+}
