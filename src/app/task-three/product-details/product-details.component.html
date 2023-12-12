@@ -1,0 +1,165 @@
+<div class="restaurant bg-white h-auto">
+  <div class="row">
+    <div class="col-12 px-0">
+      <app-restaurant-header></app-restaurant-header>
+    </div>
+  </div>
+
+  <div class="section-one">
+    <div class="row">
+      <div class="col-md-5 p-5">
+        <img src="{{productData?.img}}" class="w-100">
+      </div>
+      <div class="col-md-7 p-4">
+        <p class="fs-3 fw-bold mb-0">{{productData?.name}}</p>
+        <div class="d-flex align-items-end w-100">
+          <div>
+            <p class="card-text d-flex mb-3">
+              <span class="d-flex text-success me-1">
+                <mat-icon>access_time</mat-icon>
+                <span>{{productData?.time}} </span>
+              </span>
+              <span class="d-flex text-orange mx-1">
+                <mat-icon>star_border</mat-icon>
+                <span>{{productData?.rating}} </span>
+              </span>
+            </p>
+            <p class="fs-2 fw-bold">{{productData?.amount}} </p>
+          </div>
+
+          <div class="buttons d-flex justify-content-end w-100">
+            <a href="#" class="btn btn-orange shop cart-btn p-1 mx-1">
+              <mat-icon>add</mat-icon>
+              <span class="">Cart</span>
+            </a>
+            <a href="#" class="btn btn-outline-orange shop p-1 mx-1">
+              <mat-icon class="my-auto">favorite_border</mat-icon>
+            </a>
+          </div>
+        </div>
+
+        <hr>
+
+        <div>
+          <p class="fw-bold">About Product</p>
+          <ul>
+            <li class="my-2"><b>Description :</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget
+              egestas justo. Duis vestibulum accumsan odio, id faucibus neque. Etiam orci tortor, elementum et efficitur
+              nec, lobortis venenatis eros. </li>
+            <li class="my-2"><b>Country of Origin : </b>India</li>
+            <li class="my-2"><b>Shelf Life : </b>7 days</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-12 mb-5">
+        <p class="fs-4 fw-bold">You might also like</p>
+
+        <div class="d-flex cards">
+          <div *ngFor="let item of filteredItems" class="mx-2 ">
+            <div class="card pe-auto my-3">
+              <img src="{{item?.img}}" class="card-img-top" height="150">
+              <div class="card-body">
+                <h5 class="card-title fs-6">{{item?.name}} </h5>
+                <p class="card-text d-flex mb-0">
+                  <span class="d-flex text-success me-1">
+                    <mat-icon>access_time</mat-icon>
+                    <span>{{item?.time}} </span>
+                  </span>
+                  <span class="d-flex text-orange mx-1">
+                    <mat-icon>star_border</mat-icon>
+                    <span>{{item?.rating}} </span>
+                  </span>
+                </p>
+                <span class="card-title fw-bold fs-5">{{item?.amount}} </span>
+                <div class="d-flex justify-content-between mt-1">
+                  <div class="buttons">
+                    <a href="#" class="btn btn-orange shop p-1 mx-1">
+                      <mat-icon>add</mat-icon>
+                    </a>
+                    <a href="#" class="btn btn-outline-orange shop p-1 mx-1">
+                      <mat-icon class="my-auto">favorite_border</mat-icon>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-orange px-3 py-3 d-none d-md-block">
+    <div class="d-flex justify-content-between">
+      <div>
+        <p class="fs-4 fw-bold text-white m-0">Restaurant</p>
+        <ul class="nav text-white my-3">
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-youtube"></i>
+          </li>
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-linkedin"></i>
+          </li>
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-whatsapp"></i>
+          </li>
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-facebook"></i>
+          </li>
+        </ul>
+        <span class="text-white link-h"> © Restaurant@gmail.com</span>
+      </div>
+      <ul class="nav d-block text-white">
+        <li class="my-2">Home</li>
+        <li class="my-2">Delivery Areas</li>
+        <li class="my-2">Careers</li>
+        <li class="my-2">Customer Support</li>
+        <li class="my-2">Press</li>
+      </ul>
+      <div class="text-white">
+        <p class="fw-bold mb-0">We deliver to:</p>
+        <ul class="nav d-block text-white">
+          <li class="my-2">Bangalore</li>
+          <li class="my-2">Gurgaon</li>
+          <li class="my-2">Hyderabad</li>
+          <li class="my-2">Delhi</li>
+          <li class="my-2">Mumbai</li>
+        </ul>
+      </div>
+      <ul class="nav d-block text-white">
+        <li class="my-2">Privacy Policy</li>
+        <li class="my-2">Terms of Use</li>
+        <li class="my-2">Responsible Disclosure Policy</li>
+        <li class="my-2">Mojo - a Zepto Blog</li>
+      </ul>
+
+    </div>
+    <hr class="text-white border-2">
+
+    <p class="text-white">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy
+      and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Restaurant™ Ltd. All
+      rights reserved.</p>
+  </footer>
+
+  <footer class="mobile-screen d-md-none bg-white w-100 border-top">
+    <ul class="nav justify-content-around align-items-center w-100">
+      <li class="item px-2 py-1 pt-2 active">
+        <mat-icon>view_module</mat-icon>
+        <p class="text mb-0">Menu</p>
+      </li>
+      <li class="item px-2 py-1 pt-2">
+        <mat-icon>favorite_border</mat-icon>
+        <p class="text mb-0">Favorites</p>
+      </li>
+      <li class="item px-2 py-1 pt-2">
+        <mat-icon>list_alt</mat-icon>
+        <p class="text mb-0">List</p>
+      </li>
+      <li class="item px-2 py-1 pt-2">
+        <mat-icon>person_outline</mat-icon>
+        <p class="text mb-0">Profile</p>
+      </li>
+    </ul>
+  </footer>
+</div>

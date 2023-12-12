@@ -1,0 +1,65 @@
+.text-orange {
+  color: #f9b134 !important;
+}
+
+.bg-orange {
+  background-color: #f9b134 !important;
+}
+
+.text-success {
+  color: #25d366 !important;
+}
+
+.shop {
+  height: 35px !important;
+}
+
+.btn-orange {
+  background-color: #f9b134;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid #f9b134;
+    color: #f9b134;
+  }
+}
+
+.btn-outline-orange {
+  background-color: white;
+  border-color: #f9b134;
+  color: #f9b134;
+
+  &:hover {
+    background-color: #f9b134;
+    color: white;
+  }
+}
+
+.cart-btn {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  overflow-x: scroll;
+}
+
+.mobile-screen {
+  position: fixed;
+  bottom: 0%;
+
+  ul {
+
+    .item {
+      width: 80px;
+      height: 70px;
+      text-align: center;
+    }
+
+    .active {
+      color: #f9b134;
+    }
+  }
+}

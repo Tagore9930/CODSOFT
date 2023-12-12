@@ -1,0 +1,24 @@
+$orange: #f9b134;
+
+li {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: $orange !important;
+    border-bottom: 2px solid $orange !important;
+  }
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.active {
+  color: $orange !important;
+  border-bottom: 2px solid $orange !important;
+}
+
+.cart {
+  background-color: $orange;
+}

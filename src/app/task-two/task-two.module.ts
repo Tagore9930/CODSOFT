@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TempEmailComponent } from './temp-email/temp-email.component';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
 import { MaterialExModule } from '../shared/material.module';
+import { TempEmailHeaderComponent } from './temp-email-header/temp-email-header.component';
 
 const routes: Routes = [
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     TempEmailComponent,
-    HeaderComponent
+    TempEmailHeaderComponent
   ],
   imports: [
     CommonModule,

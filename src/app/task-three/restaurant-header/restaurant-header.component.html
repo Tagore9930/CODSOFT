@@ -1,0 +1,20 @@
+<div class="restaurant-header bg-white p-2 border-bottom">
+  <div class="d-flex justify-content-between">
+    <p *ngIf="headerTwo == false" routerLink="/task-3" class="pe-auto fs-4 fw-bold text-orange m-0">Restaurant</p>
+    <p *ngIf="headerTwo == true" routerLink="/task-3" class="d-flex align-items-center pe-auto fs-4 fw-bold m-0">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+      <span class="fw-semibold fs-6">Back</span>
+    </p>
+    <ul class="nav">
+      <li *ngFor="let item of list" [class.active]="item?.name == 'Menu'" class="text-secondary pe-auto mx-2 d-none d-md-flex">
+        <mat-icon>{{item?.icon}} </mat-icon>
+        <span class="ps-1">{{item?.name}} </span>
+      </li>
+      <li class="text-white pe-auto mx-2 d-md-none">
+        <div class="cart px-2 py-1 rounded-circle">
+          <mat-icon class="pt-1">shopping_cart</mat-icon>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
