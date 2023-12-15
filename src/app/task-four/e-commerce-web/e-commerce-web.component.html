@@ -1,0 +1,175 @@
+<div class="app-e-commerce-web h-auto">
+  <div class="row">
+    <div class="col-12 px-0">
+      <app-e-commerce-web-header></app-e-commerce-web-header>
+    </div>
+  </div>
+  <div class="section-one pb-5">
+    <div class="row">
+      <div class="col-12 px-0 my-4">
+        <div class="d-flex overflow-x-scroll">
+          <div *ngFor="let topOfferItem of topOffers" class="w-10 hover pe-auto">
+            <div class="d-flex justify-content-center">
+              <img src="{{topOfferItem?.img}}" width="75" class="my-1">
+            </div>
+            <p class="d-block text-center fw-semibold mb-0">{{topOfferItem?.name}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 px-0 my-4">
+        <div class="homepage-slider">
+          <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
+            data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div *ngFor="let sliderItem of slider; let i = index" class="carousel-item rounded-0"
+                [class.active]="i == 0">
+                <img src="{{sliderItem?.img}}" class="w-100 rounded-0 Slider-images pe-auto">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+              data-bs-slide="prev" fdprocessedid="2il0nr">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+              data-bs-slide="next" fdprocessedid="8iazf">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 px-0">
+        <img src="/assets/Task-Four/offer.jpg" alt="" class="w-100">
+      </div>
+    </div>
+    <div class="row my-4">
+      <div class="col-4 px-3 my-3">
+        <img src="/assets/Task-Four/offer-cards/img-1.jpg" class="w-100 pe-auto">
+      </div>
+      <div class="col-4 px-3 my-3">
+        <img src="/assets/Task-Four/offer-cards/img-2.jpg" class="w-100 pe-auto">
+      </div>
+      <div class="col-4 px-3 my-3">
+        <img src="/assets/Task-Four/offer-cards/img-3.jpg" class="w-100 pe-auto">
+      </div>
+      <div class="col-4 px-3 my-3">
+        <img src="/assets/Task-Four/offer-cards/img-4.jpg" class="w-100 pe-auto">
+      </div>
+      <div class="col-4 px-3 my-3">
+        <img src="/assets/Task-Four/offer-cards/img-5.jpg" class="w-100 pe-auto">
+      </div>
+      <div class="col-4 px-3 my-3">
+        <img src="/assets/Task-Four/offer-cards/img-6.jpg" class="w-100 pe-auto">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 px-4 my-4">
+        <div class="d-flex overflow-x-scroll bg-white py-3">
+          <div *ngFor="let topBrandItem of topBrands" class="w-10 pe-auto">
+            <div class="d-flex justify-content-center">
+              <img src="{{topBrandItem?.img}}" width="100" class="my-1">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="top-deals bg-white m-4">
+      <p class="fs-4 fw-bold ps-3 pt-3 mb-0">Today’s Deals</p>
+      <div class="top-deals-container d-flex overflow-x-scroll">
+        <div *ngFor="let todayDealItem of todayDeals" class="card pe-auto border-0 m-3">
+          <img src="{{todayDealItem?.img}}" class="card-img-top" height="200">
+          <div class="card-body p-2">
+            <p class="card-text mb-0">
+              <span class="bg-danger text-white px-2 py-1 rounded-1 fs-8">Up to {{todayDealItem?.offer}}% off</span>
+              <span class="text-danger fs-8 fw-bold px-1">Deal of the day</span>
+            </p>
+            <p class="mb-0">{{todayDealItem?.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="trendy-home-decoration bg-white m-4">
+      <p class="fs-4 fw-bold ps-3 pt-3 mb-0">Trendy home decoration</p>
+      <div class="trendy-home-decoration-container d-flex overflow-x-scroll">
+        <div *ngFor="let trendyHomeDecorationItem of trendyHomeDecoration" class="card pe-auto m-3">
+          <img src="{{trendyHomeDecorationItem?.img}}" class="card-img-top" height="200">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class=" px-3 py-3 d-none d-md-block">
+    <div class="d-flex justify-content-between">
+      <div>
+        <p class="fs-4 d-flex fw-bold text-white m-0">
+            <mat-icon class="fs-2 w-auto h-auto d-flex align-items-center">shopping_basket</mat-icon>
+            <span class="mx-2">Tagore Shop</span>
+        </p>
+        <ul class="nav text-white my-3">
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-youtube"></i>
+          </li>
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-linkedin"></i>
+          </li>
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-whatsapp"></i>
+          </li>
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-facebook"></i>
+          </li>
+        </ul>
+        <span class="text-white link-h"> © tagoreshop@gmail.com</span>
+      </div>
+      <ul class="nav d-block text-white">
+        <li class="my-2">Home</li>
+        <li class="my-2">Delivery Areas</li>
+        <li class="my-2">Careers</li>
+        <li class="my-2">Customer Support</li>
+        <li class="my-2">Press</li>
+      </ul>
+      <div class="text-white">
+        <p class="fw-bold mb-0">We deliver to:</p>
+        <ul class="nav d-block text-white">
+          <li class="my-2">Bangalore</li>
+          <li class="my-2">Gurgaon</li>
+          <li class="my-2">Hyderabad</li>
+          <li class="my-2">Delhi</li>
+          <li class="my-2">Mumbai</li>
+        </ul>
+      </div>
+      <ul class="nav d-block text-white">
+        <li class="my-2">Privacy Policy</li>
+        <li class="my-2">Terms of Use</li>
+        <li class="my-2">Responsible Disclosure Policy</li>
+        <li class="my-2">Mojo - a Zepto Blog</li>
+      </ul>
+
+    </div>
+    <hr class="text-white border-2">
+
+    <p class="text-white">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy
+      and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © TagoreShop™ Ltd. All
+      rights reserved.</p>
+  </footer>
+  <footer class="mobile-screen d-md-none bg-white w-100 border-top">
+    <ul class="nav justify-content-around align-items-center w-100">
+      <li class="item pe-auto px-2 py-1 pt-2 active">
+        <mat-icon>home</mat-icon>
+        <p class="text mb-0">Home</p>
+      </li>
+      <li class="item pe-auto px-2 py-1 pt-2">
+        <mat-icon>favorite_border</mat-icon>
+        <p class="text mb-0">Watchist</p>
+      </li>
+      <li class="item pe-auto px-2 py-1 pt-2">
+        <mat-icon>list_alt</mat-icon>
+        <p class="text mb-0">Orders </p>
+      </li>
+      <li class="item pe-auto px-2 py-1 pt-2">
+        <mat-icon>person_outline</mat-icon>
+        <p class="text mb-0">Profile</p>
+      </li>
+    </ul>
+  </footer>
+</div>
